@@ -2,9 +2,10 @@ package com.example.apprecetascocina.views
 
 import com.example.apprecetascocina.R
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 
 @Composable
-fun RecetaHuevo() {
+fun RecetaHuevo(navController: NavController) {
     DetailView(
         "\uD83C\uDF73 Huevo con Jamón",
         "Ingredientes:\n" +
@@ -20,5 +21,6 @@ fun RecetaHuevo() {
                 "    - Vierte los huevos en la sartén y revuelve hasta que estén cocidos.\n" +
                 "    - Sirve caliente con pan o tortillas.",
         R.drawable.huevito,
+        navController
     )
 }

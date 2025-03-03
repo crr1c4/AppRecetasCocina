@@ -2,9 +2,10 @@ package com.example.apprecetascocina.views
 
 import com.example.apprecetascocina.R
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 
 @Composable
-fun RecetaPapas() {
+fun RecetaPapas(navController: NavController) {
     DetailView(
         "\uD83C\uDF5F Papas Fritas",
         "Ingredientes:\n" +
@@ -19,5 +20,6 @@ fun RecetaPapas() {
                 "    - Retira el exceso de aceite con papel absorbente y agrégales sal.\n" +
                 "    - Disfrútalas solas o con tu salsa favorita.",
         R.drawable.papas,
+        navController
     )
 }

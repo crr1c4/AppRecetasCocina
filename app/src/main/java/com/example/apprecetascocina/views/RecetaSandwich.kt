@@ -2,9 +2,10 @@ package com.example.apprecetascocina.views
 
 import com.example.apprecetascocina.R
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 
 @Composable
-fun RecetaSandwich() {
+fun RecetaSandwich(navController: NavController) {
     DetailView(
         "\uD83E\uDD6A Sándwich Clásico",
         "Ingredientes:\n" +
@@ -21,5 +22,6 @@ fun RecetaSandwich() {
                 "    - Si lo prefieres caliente, puedes tostarlo en una sartén o sandwichera.\n" +
                 "    - Corta por la mitad y sirve.",
         R.drawable.sandwich,
+        navController
     )
 }

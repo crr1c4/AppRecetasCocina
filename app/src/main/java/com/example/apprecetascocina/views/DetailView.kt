@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -21,17 +23,24 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.apprecetascocina.components.MainIconButton
 import com.example.apprecetascocina.components.TitleBar
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DetailView(title: String, description: String, imageId: Int) {
+fun DetailView(title: String, description: String, imageId: Int, navController: NavController) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = { TitleBar(title) },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color.Transparent)
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color.Black),
+                navigationIcon = {
+                    MainIconButton(Icons.AutoMirrored.Filled.ArrowBack) {
+                        navController.popBackStack()
+                    }
+                }
             )
         },
     ) { ContentView(title, description, imageId) }

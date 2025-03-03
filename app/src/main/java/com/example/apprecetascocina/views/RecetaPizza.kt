@@ -2,9 +2,10 @@ package com.example.apprecetascocina.views
 
 import com.example.apprecetascocina.R
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 
 @Composable
-fun RecetaPizza() {
+fun RecetaPizza(navController: NavController) {
     DetailView(
         "\uD83C\uDF55 Pizza Casera",
         "Ingredientes:\n" +
@@ -24,5 +25,6 @@ fun RecetaPizza() {
                 "    - Hornea a 200°C por 15-20 minutos hasta que la masa esté dorada y el queso derretido.\n" +
                 "    - Sírvela caliente y disfruta.",
         R.drawable.pizza,
+        navController
     )
 }
