@@ -73,7 +73,8 @@ private fun ContentView(navController: NavController) {
         }
         Spacers()
         Card(
-            "Sandiwch", "Una combinación versátil de pan relleno con ingredientes como jamón, queso, vegetales y salsas, perfecto para una comida rápida y deliciosa.",
+            "Sandiwch",
+            "Una combinación versátil de pan relleno con ingredientes como jamón, queso, vegetales y salsas, perfecto para una comida rápida y deliciosa.",
             R.drawable.sandwich,
             Color.Blue,
             "Ver Receta") {
