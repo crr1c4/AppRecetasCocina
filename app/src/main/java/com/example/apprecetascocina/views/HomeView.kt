@@ -14,7 +14,10 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import com.example.apprecetascocina.R
 import com.example.apprecetascocina.components.ActionButton
@@ -40,9 +43,15 @@ fun HomeView(navController: NavController) {
 
 @Composable
 private fun ContentView(navController: NavController) {
-    Column(modifier = Modifier.fillMaxSize().background(color = Color.White),
+    Column(modifier = Modifier
+        .fillMaxSize()
+//        .background(color = Color.White)
+        .paint(
+            painter = painterResource(id = R.drawable.fondo_aplicacion),
+            contentScale = ContentScale.Crop
+        ).background(Color.White.copy(alpha = 0.9f)),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally) {
+        horizontalAlignment = Alignment.CenterHorizontally,) {
 
         Card(
             "Huevo con Jamón",

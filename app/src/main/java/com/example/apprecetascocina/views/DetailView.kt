@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
@@ -32,6 +33,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.apprecetascocina.R
 import com.example.apprecetascocina.components.MainIconButton
 import com.example.apprecetascocina.components.TitleBar
 
@@ -61,8 +63,12 @@ private fun ContentView(title: String, description: String, imageId: Int) {
 
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(Color.White)
+//        .background(Color.White)
         .verticalScroll(scroll)
+        .paint(
+            painter = painterResource(id = R.drawable.fondo_aplicacion),
+            contentScale = ContentScale.Crop
+        ).background(Color.White.copy(alpha = 0.9f))
         ,
         // verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
