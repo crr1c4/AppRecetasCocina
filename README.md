@@ -22,14 +22,14 @@ de cuatro recetas con descripciones detalladas, imágenes y navegación intuitiv
     <img src="https://github.com/crr1c4/AppRecetasCocina/blob/master/app/src/main/res/docs/sandwich.jpeg" alt="Logo App" width="150">
 </p>
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Tecnologías utilizadas
 - Lenguaje: Kotlin
 - Framework UI: Jetpack Compose
 - Navegación: Jetpack Navigation
 - Gestión de Recursos: Material Design
 - IDE: Android Studio Ladybug 🐞
 
-## 🚀 Instalación y Uso
+## 🚀 Instalación y uso
 
 Clona este repositorio:
 
