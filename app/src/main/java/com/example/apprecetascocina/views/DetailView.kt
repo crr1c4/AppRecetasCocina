@@ -35,7 +35,7 @@ fun DetailView(title: String, description: String, imageId: Int, navController: 
         topBar = {
             CenterAlignedTopAppBar(
                 title = { TitleBar(title) },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color.Black),
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color.Blue),
                 navigationIcon = {
                     MainIconButton(Icons.AutoMirrored.Filled.ArrowBack) {
                         navController.popBackStack()
